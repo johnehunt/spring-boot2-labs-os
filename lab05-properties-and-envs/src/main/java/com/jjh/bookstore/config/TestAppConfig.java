@@ -7,10 +7,9 @@ import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @Profile("test")
-@PropertySource("classpath*:test-application.properties")
+@PropertySource("classpath:test-application.properties")
 @ComponentScan(basePackages = {
         "com.jjh.bookstore.beans",
         "com.jjh.bookstore.dao",
         "com.jjh.bookstore.service"})
-public class TestAppConfig {
-}
+public class TestAppConfig {}
