@@ -1,0 +1,12 @@
+CREATE SCHEMA `bookstore` ;
+
+CREATE TABLE `bookstore`.`books` (
+  `isbn` VARCHAR(10) NOT NULL,
+  `title` VARCHAR(45) NOT NULL,
+  `author` VARCHAR(45) NULL,
+  `publisher` VARCHAR(45) NULL,
+  `price` VARCHAR(45) NULL,
+  PRIMARY KEY (`isbn`));
+
+ INSERT INTO `bookstore`.`books` (`isbn`, `title`, `author`, `publisher`, `price`) VALUES ('123', 'Java and Spring', 'John Smith', 'Tech Books', '12.99');
+ INSERT INTO `bookstore`.`books` (`isbn`, `title`, `author`, `publisher`, `price`) VALUES ('234', 'Java Unleased', 'Adam Jones', 'Tech Books', '15.55');

@@ -6,6 +6,7 @@ import com.jjh.bookstore.dao.BookDAO;
 import com.jjh.bookstore.domain.Book;
 import com.jjh.bookstore.domain.BookException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -20,7 +21,7 @@ public class BookServiceImpl implements BookService {
     private String name;
 
     @Autowired
-    public BookServiceImpl(BookDAO bookDAO) {
+    public BookServiceImpl(@Qualifier("JDBCBookDAO") BookDAO bookDAO) {
         this.bookDAO = bookDAO;
     }
 

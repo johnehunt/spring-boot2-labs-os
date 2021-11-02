@@ -1,9 +1,6 @@
 package com.jjh.bookstore.config;
 
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.*;
 
 @Configuration
 @Profile("prod")
@@ -13,4 +10,5 @@ import org.springframework.context.annotation.PropertySource;
         "com.jjh.bookstore.dao",
         "com.jjh.bookstore.service",
         "com.jjh.bookstore.controller"})
+@Import(JDBCDatabaseConfig.class)
 public class ProdAppConfig {}
