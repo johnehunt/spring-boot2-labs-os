@@ -16,6 +16,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
+
+        <!-- Dependencies for web application -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
