@@ -17,6 +17,12 @@
 
     <dependencies>
 
+        <!-- Required by Web Security -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
         <!-- Required to access MongoDB -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
