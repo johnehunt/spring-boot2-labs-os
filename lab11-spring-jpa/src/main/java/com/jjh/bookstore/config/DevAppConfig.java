@@ -10,5 +10,5 @@ import org.springframework.context.annotation.*;
         "com.jjh.bookstore.dao",
         "com.jjh.bookstore.service",
         "com.jjh.bookstore.controller"})
-@Import(JDBCDatabaseConfig.class)
+@Import({JDBCDatabaseConfig.class, JPAConfig.class})
 public class DevAppConfig {}
