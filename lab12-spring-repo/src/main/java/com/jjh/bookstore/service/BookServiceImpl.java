@@ -21,7 +21,7 @@ public class BookServiceImpl implements BookService {
     private String name;
 
     @Autowired
-    public BookServiceImpl(@Qualifier("JPABookDAO") BookDAO bookDAO) {
+    public BookServiceImpl(@Qualifier("RepoBookDAO") BookDAO bookDAO) {
         this.bookDAO = bookDAO;
     }
 
