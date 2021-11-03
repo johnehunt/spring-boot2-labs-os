@@ -69,7 +69,7 @@ public class Book {
 
 	@Override
 	public String toString() {
-		return "BookImpl [author=" + author + ", isbn=" + isbn + ", price="
+		return "Book[author=" + author + ", isbn=" + isbn + ", price="
 				+ price + ", publisher=" + publisher + ", title=" + title + "]";
 	}
 
