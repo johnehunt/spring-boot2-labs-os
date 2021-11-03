@@ -1,5 +1,7 @@
 package com.jjh.bookstore.domain;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -10,6 +12,7 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table(name="books")
+@Document
 public class Book {
 
 	@NotNull
@@ -69,7 +72,7 @@ public class Book {
 
 	@Override
 	public String toString() {
-		return "BookImpl [author=" + author + ", isbn=" + isbn + ", price="
+		return "Book[author=" + author + ", isbn=" + isbn + ", price="
 				+ price + ", publisher=" + publisher + ", title=" + title + "]";
 	}
 

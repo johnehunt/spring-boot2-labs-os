@@ -16,6 +16,13 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
+
+        <!-- Required to access MongoDB -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+
         <!-- Required by JPA -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

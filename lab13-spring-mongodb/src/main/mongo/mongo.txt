@@ -1,0 +1,20 @@
+In mongosh client tool use the following commands
+
+use bookstore;
+
+db.book.insertOne({
+    isbn: '123',
+    title: 'Java and Spring',
+    author: 'John Smith',
+    publisher: 'Tech Books',
+    price: 14.99,
+  });
+
+
+db.book.insertOne({
+    isbn: '234',
+    title: 'Java Unleased',
+    author: 'Adam Byrne',
+    publisher: 'Tech Books',
+    price: 12.99,
+  });
