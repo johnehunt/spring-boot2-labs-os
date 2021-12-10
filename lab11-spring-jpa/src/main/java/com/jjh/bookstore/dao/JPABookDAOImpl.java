@@ -32,7 +32,7 @@ public class JPABookDAOImpl implements BookDAO {
     }
 
     @Override
-    @org.springframework.transaction.annotation.Transactional
+    @Transactional
     public void deleteBook(Book book) {
         entityManager.remove(book);
     }

@@ -5,6 +5,7 @@ import com.jjh.bookstore.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,11 +28,13 @@ public class RepoBookDAOImpl implements BookDAO {
     }
 
     @Override
+    @Transactional
     public void addBook(Book book) {
         repo.save(book);
     }
 
     @Override
+    @Transactional
     public void deleteBook(Book book) {
         repo.delete(book);
     }
