@@ -1,2 +1,39 @@
+from the command line
+
 createdb bookstore
 
+Now use:
+
+psql bookstore
+
+To issue following commands
+
+-- Table: public.books
+
+-- DROP TABLE IF EXISTS public.books;
+
+CREATE TABLE IF NOT EXISTS public.books
+(
+    isbn character varying(6) COLLATE pg_catalog."default" NOT NULL,
+    author character varying(255) COLLATE pg_catalog."default",
+    price double precision NOT NULL,
+    publisher character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    title character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT books_pkey PRIMARY KEY (isbn)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.books
+    OWNER to jjh;
+
+GRANT ALL ON TABLE public.books TO jjh;
+
+
+INSERT INTO public.books(
+	isbn, author, price, publisher, title)
+	VALUES ('1234AB', 'Spring Boot', 'John Smith', 'Tech Books', 12.99);
+
+
+SELECT isbn, author, price, publisher, title
+	FROM public.books;

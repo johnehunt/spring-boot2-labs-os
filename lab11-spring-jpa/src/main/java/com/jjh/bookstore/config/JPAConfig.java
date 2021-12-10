@@ -21,7 +21,7 @@ public class JPAConfig {
     adapter.setShowSql(true);
     adapter.setGenerateDdl(true);
     factory.setJpaVendorAdapter(adapter);
-    factory.setPackagesToScan("com.jjh.domain");
+    factory.setPackagesToScan("com.jjh.bookstore.domain");
     return factory;
   }
 
