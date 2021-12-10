@@ -11,18 +11,18 @@ import javax.sql.DataSource;
 @Configuration
 public class JPAConfig {
 
-    @Bean
-    public LocalContainerEntityManagerFactoryBean entityManager(DataSource dataSource) {
-        LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
-        factory.setDataSource(dataSource);
-        factory.setPersistenceUnitName("BookstoreJPA");
-        factory.setJpaDialect(new HibernateJpaDialect());
-        HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
-        adapter.setShowSql(true);
-        adapter.setGenerateDdl(true);
-        factory.setJpaVendorAdapter(adapter);
-        factory.setPackagesToScan("com.jjh.bookstore.domain");
-        return factory;
-    }
+  @Bean
+  public LocalContainerEntityManagerFactoryBean entityManager(DataSource dataSource) {
+    LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
+    factory.setDataSource(dataSource);
+    factory.setPersistenceUnitName("BookstoreJPA");
+    factory.setJpaDialect(new HibernateJpaDialect());
+    HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
+    adapter.setShowSql(true);
+    adapter.setGenerateDdl(true);
+    factory.setJpaVendorAdapter(adapter);
+    factory.setPackagesToScan("com.jjh.domain");
+    return factory;
+  }
 
 }
